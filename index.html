@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+<title>[!] Fatih Tools [!]</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<meta content="Mager Nulis yang membantu kamu mengerjakan tugas" name="description" />
+<link rel="icon" type="image/png" href="https://github.com/FatihArridho.png">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css">
+</head>
+<body bgcolor="#1e1e1e" text="white">
+<center>
+  <font size=5>Mager Nulis</font><br><font face=Staatliches size=3>rekomendasi buat yang mager nulis tugas wkwk</font>
+  <hr><font face=Staatliches size=3>Hasil akan di tampilakan di bawah ini jika gambar tidak muncul lebih dari 30 detik silahkan refresh halaman</font><hr>
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Staatliches');
+
+textarea {
+max-width: 90%;
+width: 100%;
+height: 150px;
+resize: none;
+outline: none;
+overflow: auto;
+background: transparent;
+color: #ffffff;
+}
+
+button {
+  background: transparent;
+    font-family: Staatliches;
+  color: #ffffff;
+  border-color: #ffffff;
+  cursor: pointer;
+}
+
+input {
+  background: transparent;
+  font-family: Courier;
+  color: #ffffff;
+  border-color: #ffffff;
+  cursor: pointer;
+}
+
+font {
+  font-family: Staatliches;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e1e;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #1e1e1e;    /* color of the scroll thumb */
+  border: 3px solid gray;  /* creates padding around scroll thumb */
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+</style>
+<div class="tile">
+		<!-- Hasil Gambar Akan Muncul Di Sini -->
+		<div class="tile-body" id="hasil">
+		</div>
+<br>
+	<br>
+
+	<div class="tile">
+		<div class="tile-body">
+            <font>Nama<br>
+			<input type="text" id='nama' class="form-control" placeholder="Masukan nama kamu !" height="40" style="margin: 5px auto; padding-left: 5px; text-align: center;" size="35"  required=true><br>
+			<font>Kelas<br>
+			<input type="text" id='kelas' class="form-control" placeholder="Masukan kelas !" height="40" style="margin: 5px auto; padding-left: 5px; text-align: center;" size="35" required=true><br>
+			<font>No<br>
+			<input type="text" id='nomor' class="form-control" placeholder="Masukan nomor absen !" height="40" style="margin: 5px auto; padding-left: 5px; text-align: center;" size="35" required=true><br>
+			<font>Teks<br>
+			<textarea type="text" id='teks' class="form-control" placeholder="Masukan text yang ingin di tulis !" rows="12" height="20" style="margin: 5px auto; padding-left: 5px;" size="35" required=true></textarea>
+		</div>
+	</div>
+	<div class="tile">
+		<div class="row">
+		</div>
+		<div class="col">
+			<input type='button' onclick="buat()" value="TULIS" id='button' class="btn btn-danger btn-block">
+            <font><hr>Made with ❣️ by <a href="https://instagram.com/fatdho">Fatih Arridho</a>
+		</div>
+	</div>
+                    
+	<script>
+		function buat() {
+			var jeneng = encodeURIComponent(document.getElementById("nama").value);
+			var kelase = encodeURIComponent(document.getElementById("kelas").value);
+			var nomore = encodeURIComponent(document.getElementById("nomor").value);
+			var isi = encodeURIComponent(document.getElementById("teks").value);
+			document.querySelector('#hasil').innerHTML = `<img style='max-width: 450px;max-height: 450px;' src='https://oni-chan.my.id/api/Fmake/nulis?nama=${jeneng}&no=${nomore}&kelas=${kelase}&text=${isi}' alt="hasil.png"></img>`;
+		}
+		
+		
+		//ambil aja link api nya kalau mau gumain tapi ingat request nya jangan spam ya
+		
+	</script>
+    </div>
+</div>
+</body>
+</html>
